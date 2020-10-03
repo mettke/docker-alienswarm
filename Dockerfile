@@ -4,6 +4,7 @@ RUN : && \
     echo "x86" > /etc/apk/arch && \
     apk add \
         freetype \
+        ncurses-libs \
         wine
 
 RUN : && \
