@@ -78,12 +78,12 @@ function launch() {
     export WINEDEBUG=fixme-all
     local cmd
 
-    cmd="wine start /wait alienswarm/srcds.exe "
-    cmd+="-game reactivedrop "
-    cmd+="-console "
-    cmd+="-port 27015 "
-    cmd+="+exec server "
-    cmd+="+map lobby"
+    cmd="wine start /wait alienswarm/srcds.exe"
+    cmd="${cmd} -game reactivedrop"
+    cmd="${cmd} -console"
+    cmd="${cmd} -port 27015"
+    cmd="${cmd} +exec server"
+    cmd="${cmd} +map lobby"
 
     echo "Running command: $cmd" > $(basename $0)-cmd.log
     $cmd
